@@ -1,0 +1,53 @@
+<div>
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="topnavbar">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">{{application.title}}</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li ng-repeat="menu in menus" ng-click="menuClick(menu);">
+            <a ng-class="{'selected-menu': menu.id==envid} " href="/index.html#"  >{{menu.name}}</a>
+          </li>
+        </ul>
+        <div class="row">
+            <div class="col-md-3">
+                <p class="input-group margin_8px">
+                    <input type="text" class="form-control"
+                     uib-datepicker-popup="{{format}}"
+                     ng-model="datevalue" 
+                     is-open="opened"
+                     datepicker-options="dateOptions"
+                     alt-input-formats="altInputFormats"
+                     close-text="Close" />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="opened = true;">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </button>
+                    </span>            
+                </p>
+            </div>
+        </div>
+      </div>        
+    </div>    
+  </nav>
+</div>
+<div class="container-fluid">
+  <div ui-view></div>
+</div>
+<script>
+  $(document).ready(function(){
+    $(document.body).css('padding-top', $('#topnavbar').height() + 10);
+    $(window).resize(function(){
+      $(document.body).css('padding-top', $('#topnavbar').height() + 10);
+    });
+  });
+</script>

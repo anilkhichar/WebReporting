@@ -1,0 +1,92 @@
+/* CSS declarations go here */
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.no_margin {
+  margin: 0px !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.no-padding-left {
+  padding-left: 0 !important;
+}
+
+.no_padding {
+  padding: 0 !important;
+}
+
+.no_border{
+	border:none;
+}
+
+.no_list_style{
+    list-style: none !important;
+}
+
+.full_width{
+  width: 100% !important;
+}
+
+.margin_8px
+{
+    margin: 8px !important;
+}
+
+.cursor_pointer {
+  cursor: pointer;
+}
+
+.selected-menu {
+  background-color: #337ab7 !important;
+}
+
+.navbar-inverse {
+  background-color: #205080 !important;
+}
+
+.navbar-inverse .navbar-nav > li {
+  margin-right: 2px;
+}
+
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
+  color: #FFFFFF !important;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+  background-color: #337ab7 !important;
+}
+
+.code .nav-tabs>li.active>a, .code .nav-tabs>li.active>a:hover, .code .nav-tabs>li.active>a:focus {
+    background-color: rgba(141,192,219,.25); /*#f8f8f8;*/
+    border: 1px solid #ccc;
+    border-bottom-color: transparent;
+}
+
+.ng-table th.sortable
+{
+    background-color: rgba(141,192,219,.25) !important;
+    font-weight: normal;
+}
+
+.ng-table th.sortable.sort-desc, .ng-table th.sortable.sort-asc
+{
+    background-color: #337ab7 !important;
+    color: #fff;
+    font-weight: normal;
+}
+
+.table-bordered>thead>tr>td, .table-bordered>thead>tr>th
+{
+    border-bottom-width: 0px;
+}
+
+.nav-tabs.nav-justified>li>a
+{
+    border-bottom-width: 0px; 
+}

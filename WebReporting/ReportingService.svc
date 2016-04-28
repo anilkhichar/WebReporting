@@ -1,0 +1,4 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" 
+    Service="WebReporting.ReportingService"
+    CodeBehind="ReportingService.svc.cs"
+    Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>

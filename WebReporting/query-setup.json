@@ -1,0 +1,47 @@
+﻿{
+    "application": 
+    { 
+        "serviceurl": "/ReportingService.svc",
+        "title": "Job Radar"
+    },
+    "environments": [
+      {
+        "id": "prod",
+        "name": "Prod",
+        "connection_string": "Server=ProdServerName;Database=DBName;User Id=User_ID;Password=password;"
+      },
+      {
+        "id": "qa",
+        "name": "QA",
+        "connection_string": "Server=QAServerName;Database=DBName;User Id=User_ID;Password=password;"
+      },
+      {
+        "id": "uat",
+        "name": "UAT",
+        "connection_string": "Server=UATServerName;Database=DBName;User Id=User_ID;Password=password;"
+      }
+    ],
+    "repositories": [
+      {
+        "id": "ssis_gdw",
+        "name": "SSIS-GDW",
+        "query": "select top 2000 * FROM TableName1 where (convert(date, Last_Modified_Date) = @date or @date='')",
+        "default_sort_col_name": "ID",
+        "default_sort_col_order": "desc"
+      },
+      {
+        "id": "ssis_tact",
+        "name": "SSIS-Tactical",
+        "query": "select top 2000 * FROM TableName2 where (convert(date, Date_Column) = @date or @date='')",      
+        "default_sort_col_name": "ID",
+        "default_sort_col_order": "desc"
+      },
+      {
+        "id": "ssis_info",
+        "name": "INFORMATICA",
+        "query": "select top 2000 * FROM TableName3 where (convert(date, Date_Column) = @date or @date='')",
+        "default_sort_col_name": "ID",
+        "default_sort_col_order": "asc"
+      }
+    ]
+}
